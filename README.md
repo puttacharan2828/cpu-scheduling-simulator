@@ -1,117 +1,106 @@
-# 🖥️ CPU Scheduling Simulator
+Custom Process Scheduling Simulator
+Overview
 
-## 📌 Overview
+The Custom Process Scheduling Simulator is an interactive application designed to visualize and compare different CPU scheduling algorithms. It helps users understand how processes are scheduled in an operating system through graphical representation and performance metrics.
 
-The **CPU Scheduling Simulator** is an interactive web-based tool that helps users understand and visualize different CPU scheduling algorithms used in operating systems.
+Features
+Implementation of multiple CPU scheduling algorithms:
+First Come First Serve (FCFS)
+Shortest Job First (SJF - Non Preemptive)
+Shortest Remaining Time First (SRTF)
+Priority Scheduling (Preemptive and Non Preemptive)
+Round Robin
+Gantt chart visualization for process execution
+Calculation of key metrics:
+Waiting Time
+Turnaround Time
+Comparison of all algorithms in a single view
+Simple and interactive user interface
 
-It allows users to input custom processes and compare how different algorithms perform based on waiting time and turnaround time.
 
----
+Technologies Used
+Python
+Streamlit
+Pandas
+Matplotlib
 
-## 🚀 Features
 
-* ✅ Supports multiple scheduling algorithms:
+Project Structure
+project-folder/
+│── app.py
+│── run_app.bat
+│── requirements.txt
+│── README.md
+│
+├── scheduler/
+│   ├── fcfs.py
+│   ├── sjf.py
+│   ├── srtf.py
+│   ├── round_robin.py
+│   ├── priority.py
+│   ├── priority_preemptive.py
+│
+└── utils/
+    ├── gantt.py
 
-  * First Come First Serve (FCFS)
-  * Shortest Job First (SJF)
-  * Shortest Remaining Time First (SRTF)
-  * Round Robin (RR)
-  * Priority Scheduling (Preemptive & Non-Preemptive)
 
-* 📊 Compare all algorithms at once
+Installation and Setup
 
-* 📈 Visual Gantt Chart representation
+Follow these steps to set up the project on your system:
 
-* ⚙️ Adjustable Time Quantum for Round Robin
+1. Install Python (if not already installed)
+Download and install Python
+While installing, enable "Add Python to PATH"
+2. Verify Python Installation
 
-* 📝 Easy process input using table interface
+Open Command Prompt or Terminal and run:
 
-* 📉 Performance metrics:
+python --version
 
-  * Waiting Time
-  * Turnaround Time
+If Python is installed correctly, it will display the version number.
 
----
+3. Install Required Libraries
 
-## 🧠 Algorithms Included
+Navigate to your project folder and run:
 
-| Algorithm   | Type                        |
-| ----------- | --------------------------- |
-| FCFS        | Non-Preemptive              |
-| SJF         | Non-Preemptive              |
-| SRTF        | Preemptive                  |
-| Round Robin | Preemptive                  |
-| Priority    | Preemptive & Non-Preemptive |
-
----
-
-## 🛠️ Technologies Used
-
-* Python
-* Streamlit
-* Pandas
-* Matplotlib
-
----
-
-## ▶️ How to Run Locally
-
-1. Install required libraries:
-
-```
 pip install -r requirements.txt
-```
 
-2. Run the application:
+If the above command does not work, install libraries one by one:
 
-```
+pip install streamlit
+pip install pandas
+pip install matplotlib
+4. Verify Installation (Optional)
+streamlit --version
+Run Application
+
+You can run the project using any of the following methods:
+
+Option 1: Using Command Line
 streamlit run app.py
-```
 
-3. Open in browser:
+Option 2: Using Batch File (Easy Method)
+Double-click the run_app.bat file
+The application will automatically open in your browser
 
-```
-http://localhost:8501
-```
+Usage
+Enter process details such as arrival time, burst time, and priority
+Select a scheduling algorithm
+View the Gantt chart and performance metrics
+Compare results across different algorithms
+Objective
 
----
+The main objective of this project is to provide a practical understanding of CPU scheduling concepts and help students visualize how different algorithms behave under various conditions.
 
-## 🌐 Deployment
+Future Improvements
+Add more scheduling algorithms
+Enhance UI design
+Include export options for results
+Add real-time simulation controls
+Conclusion
 
-This project can be deployed using Streamlit Community Cloud for online access.
+This simulator serves as an educational tool for students to explore and analyze CPU scheduling techniques in an interactive and visual manner.
 
----
+Author
 
-## 🎯 Use Cases
-
-* Learning CPU scheduling algorithms
-* Classroom demonstrations
-* Lab experiments
-* Algorithm comparison and analysis
-
----
-
-## 👨‍💻 Author
-
-Developed as part of a B.Tech Data Science project (CBP).
-
----
-
-## 🙏 Acknowledgment
-
-Special thanks to faculty for guidance and support in completing this project.
-
----
-
-## 📌 Future Enhancements
-
-* Add more scheduling algorithms
-* Export results as CSV/PDF
-* Improve UI/UX design
-* Add step-by-step execution visualization
-
----
-
-## ⭐ Conclusion
-
-This simulator simplifies complex scheduling concepts by providing an interactive and visual learning experience, making it useful for both students and educators.
+BTech Data Science Student
